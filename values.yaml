@@ -8,7 +8,7 @@ image:
   repository: netboxcommunity/netbox
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: ""
+  tag: "v3.1"
 
 superuser:
   name: admin
@@ -300,6 +300,8 @@ postgresql:
   # To use an external database, set this to false and configure the settings
   # under externalDatabase
   enabled: true
+  image:
+    tag: "14"
 
   postgresqlUsername: netbox
   postgresqlDatabase: netbox
